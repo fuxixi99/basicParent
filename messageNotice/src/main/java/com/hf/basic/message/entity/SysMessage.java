@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,6 +16,7 @@ import java.util.Date;
  */
 @ApiModel(value = "",description = "")
 @TableName("sys_message")
+@Data
 public class SysMessage implements Serializable,Cloneable{
     /** 消息的id */
     @ApiModelProperty(name = "消息的id",notes = "")

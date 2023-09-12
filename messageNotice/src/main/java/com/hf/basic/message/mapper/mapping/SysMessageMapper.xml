@@ -2,4 +2,36 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hf.basic.message.mapper.SysMessageMapper">
 
+    <select id="getList" resultType="java.util.Map">
+        select * from sys_message
+    </select>
+    <insert id="add" >
+        insert into sys_message(message_id,
+                                template_id ,
+                                receive_user_id,
+                                receive_type ,
+                                message_title ,
+                                message_content ,
+                                message_type ,
+                                message_send_time ,
+                                read_flag ,
+                                create_user ,
+                                create_time ,
+                                update_user ,
+                                update_time )
+            VALUES 
+            (#{sysMessage.messageId},
+                #{sysMessage.templateId},
+                #{sysMessage.receiveUserId},
+                #{sysMessage.receiveType},
+                #{sysMessage.messageTitle},
+                #{sysMessage.messageContent},
+                #{sysMessage.messageType},
+                #{sysMessage.messageSendTime}
+                #{sysMessage.readFlag},
+                #{sysMessage.createUser},
+                #{sysMessage.createTime},
+                #{sysMessage.updateUser},
+                #{sysMessage.updateTime})
+    </insert>
 </mapper>

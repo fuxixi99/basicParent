@@ -1,0 +1,32 @@
+server:
+  port: 8200
+spring:
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        group: hf-basic
+        username: nacos
+        password: nacos
+        register-enabled: true
+        #nacos??
+        server-addr: 127.0.0.1:8848
+        #????
+        service: message
+
+
+  application:
+    name: message
+  datasource:
+    url: jdbc:mysql://122.9.106.3:3306/hfbasic?useUnicode=true&characterEncoding=utf8&userSSL=false
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: whucsB507@
+mybatis-plus:
+  mapper-locations: classpath:com/hf/basic/*/mapper/mapping/*.xml
+  # ,/xml/*.xml
+  type-aliases-package: com.hf.basic.*.entity  # ????????
+  global-config:
+    db-config:
+      logic-delete-value: -1
+      logic-not-delete-value: 1
