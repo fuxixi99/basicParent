@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SysMessageServiceImpl extends ServiceImpl<SysMessageMapper, SysMessage> implements SysMessageService {
-   @Override
-    public void add(SysMessage sysMessage){
-       this.save(sysMessage);
-   }
+//   @Override
+//    public void add(SysMessage sysMessage){
+//       this.save(sysMessage);
+//   }
 
 }

@@ -26,3 +26,10 @@ mybatis:
   mapper-locations: classpath:mapping/*mapper.xml # Mybatis ??????
   type-aliases-package: com.hf.basic.entity  # ????????
 
+minio:
+  url: http://218.245.99.248:9001
+  accessKey: minio
+  secretKey: minio@2022
+  bucketName: application
+#  accessKey: WVUFGGENPVSPEDBS1521
+#  secretKey: Bco1MoAi2+7k89BG1kmA+x8YrZqYlO1Bx1uVRM3t
